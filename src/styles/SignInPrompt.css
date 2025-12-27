@@ -1,0 +1,156 @@
+/* Google Material Design Sign-In Prompt */
+
+.signin-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.signin-modal {
+    background: white;
+    border-radius: 12px;
+    max-width: 450px;
+    width: 90%;
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 8px 16px 4px rgba(60, 64, 67, .3);
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    color: #5f6368;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.modal-close:hover {
+    background: #f1f3f4;
+    color: #202124;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.google-icon {
+    margin: 0 auto 24px;
+    width: 48px;
+    height: 48px;
+}
+
+.signin-modal h2 {
+    font-family: 'Google Sans', 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #202124;
+    margin-bottom: 12px;
+}
+
+.modal-description {
+    font-size: 14px;
+    color: #5f6368;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.btn-signin {
+    width: 100%;
+    padding: 12px 24px;
+    background: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Google Sans', 'Roboto', sans-serif;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.btn-signin:hover {
+    background: #1557b0;
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, .3), 0 4px 8px 3px rgba(60, 64, 67, .15);
+}
+
+.btn-continue {
+    width: 100%;
+    padding: 12px 24px;
+    background: white;
+    color: #5f6368;
+    border: 1px solid #dadce0;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Google Sans', 'Roboto', sans-serif;
+}
+
+.btn-continue:hover {
+    background: #f8f9fa;
+    border-color: #c4c7c5;
+}
+
+.modal-note {
+    font-size: 12px;
+    color: #80868b;
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .signin-modal {
+        padding: 32px 24px;
+    }
+
+    .signin-modal h2 {
+        font-size: 20px;
+    }
+}

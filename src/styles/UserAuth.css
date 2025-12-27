@@ -1,0 +1,139 @@
+/* Google Material Design User Auth */
+
+.auth-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 32px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, .3), 0 4px 8px 3px rgba(60, 64, 67, .15);
+}
+
+.auth-form h2 {
+    font-family: 'Google Sans', 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #202124;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.auth-input {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: #202124;
+    transition: border-color 0.2s;
+}
+
+.auth-input:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.1);
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    background: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Google Sans', 'Roboto', sans-serif;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+}
+
+.auth-btn:hover {
+    background: #1557b0;
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, .3), 0 4px 8px 3px rgba(60, 64, 67, .15);
+}
+
+.auth-toggle {
+    text-align: center;
+    margin-top: 16px;
+    color: #5f6368;
+    font-size: 14px;
+}
+
+.auth-toggle button {
+    background: none;
+    border: none;
+    color: #1a73e8;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.welcome-message {
+    padding: 16px;
+    background: #e8f0fe;
+    border-left: 4px solid #1a73e8;
+    border-radius: 4px;
+    margin-bottom: 24px;
+}
+
+.welcome-message h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #202124;
+    margin-bottom: 8px;
+}
+
+.user-email {
+    color: #5f6368;
+    font-size: 14px;
+}
+
+.history-card {
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+    margin-bottom: 12px;
+    transition: all 0.2s;
+}
+
+.history-card:hover {
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, .3), 0 4px 8px 3px rgba(60, 64, 67, .15);
+    border-color: #1a73e8;
+}
+
+.history-card p {
+    color: #202124;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.translation-item {
+    padding: 12px;
+    border-left: 3px solid #1a73e8;
+    background: #f8f9fa;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.translation-text {
+    color: #1a73e8;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.translation-timestamp {
+    color: #80868b;
+    font-size: 12px;
+}
+
+.no-history {
+    text-align: center;
+    color: #80868b;
+    padding: 40px;
+    font-size: 14px;
+}

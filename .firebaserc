@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "signspeak-devstack"
+  },
+  "targets": {},
+  "etags": {}
+}

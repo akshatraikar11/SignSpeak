@@ -1,0 +1,220 @@
+/* Google Material Design Gesture Scroll */
+
+.gesture-scroll-container {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.gesture-toggle-btn {
+    padding: 12px 24px;
+    background: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Google Sans', 'Roboto', sans-serif;
+}
+
+.gesture-toggle-btn:hover {
+    background: #1557b0;
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, .3), 0 4px 8px 3px rgba(60, 64, 67, .15);
+    transform: translateY(-2px);
+}
+
+.gesture-toggle-btn.active {
+    background: #34a853;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+}
+
+.gesture-toggle-btn.active:hover {
+    background: #2d8e47;
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, .3), 0 4px 8px 3px rgba(60, 64, 67, .15);
+}
+
+.gesture-status {
+    background: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+    color: #202124;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+    animation: slideInLeft 0.3s ease-out;
+    min-width: 200px;
+    text-align: center;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.gesture-status.active {
+    border-color: #34a853;
+    background: #e6f4ea;
+    color: #137333;
+}
+
+.gesture-icon {
+    font-size: 20px;
+    display: inline-block;
+}
+
+.gesture-error {
+    background: #fce8e6;
+    border: 1px solid #ea4335;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #c5221f;
+    font-size: 14px;
+    max-width: 250px;
+}
+
+.gesture-instructions {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    color: #202124;
+    z-index: 999;
+    max-width: 500px;
+    box-shadow: 0 8px 16px 4px rgba(60, 64, 67, .3);
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.gesture-instructions h3 {
+    font-family: 'Google Sans', 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: #202124;
+}
+
+.gesture-instructions p {
+    color: #5f6368;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.gesture-instructions ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.gesture-instructions li {
+    padding: 12px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #202124;
+}
+
+.gesture-instructions .gesture-emoji {
+    font-size: 24px;
+}
+
+.gesture-instructions button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s;
+    font-family: 'Google Sans', 'Roboto', sans-serif;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15);
+}
+
+.gesture-instructions button:hover {
+    background: #1557b0;
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, .3), 0 4px 8px 3px rgba(60, 64, 67, .15);
+}
+
+/* Secondary button (Cancel) */
+.gesture-instructions button:last-child {
+    background: white;
+    color: #5f6368;
+    border: 1px solid #dadce0;
+    box-shadow: none;
+    margin-top: 8px;
+}
+
+.gesture-instructions button:last-child:hover {
+    background: #f8f9fa;
+    border-color: #c4c7c5;
+    box-shadow: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gesture-scroll-container {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .gesture-toggle-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .gesture-status {
+        font-size: 13px;
+        padding: 10px 16px;
+        min-width: 150px;
+    }
+
+    .gesture-instructions {
+        padding: 24px 20px;
+        max-width: 90%;
+    }
+
+    .gesture-instructions h3 {
+        font-size: 20px;
+    }
+
+    .gesture-instructions li {
+        font-size: 13px;
+    }
+}

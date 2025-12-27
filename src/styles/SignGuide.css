@@ -1,0 +1,227 @@
+/* Google Material Design Sign Guide */
+
+.sign-guide-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 12px 24px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 6px 2px rgba(60, 64, 67, .3);
+  transition: all 0.2s;
+  font-family: 'Google Sans', 'Roboto', sans-serif;
+  z-index: 1000;
+}
+
+.sign-guide-toggle:hover {
+  background: #1557b0;
+  box-shadow: 0 4px 12px 4px rgba(60, 64, 67, .3);
+  transform: translateY(-2px);
+}
+
+.sign-guide-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.sign-guide-panel {
+  background: white;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 16px 4px rgba(60, 64, 67, .3);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.sign-guide-header {
+  padding: 24px;
+  border-bottom: 1px solid #dadce0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sign-guide-header h2 {
+  font-family: 'Google Sans', 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #202124;
+  margin: 0;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: #5f6368;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  background: #f1f3f4;
+  color: #202124;
+}
+
+.category-filter {
+  padding: 16px 24px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #dadce0;
+  background: #f8f9fa;
+}
+
+.category-filter button {
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid #dadce0;
+  border-radius: 16px;
+  color: #5f6368;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Roboto', sans-serif;
+}
+
+.category-filter button:hover {
+  background: #f1f3f4;
+  border-color: #1a73e8;
+}
+
+.category-filter button.active {
+  background: #e8f0fe;
+  border-color: #1a73e8;
+  color: #1a73e8;
+}
+
+.signs-grid {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  overflow-y: auto;
+  max-height: calc(90vh - 200px);
+}
+
+.signs-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.signs-grid::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+
+.signs-grid::-webkit-scrollbar-thumb {
+  background: #dadce0;
+  border-radius: 4px;
+}
+
+.signs-grid::-webkit-scrollbar-thumb:hover {
+  background: #c4c7c5;
+}
+
+.sign-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #dadce0;
+  transition: all 0.2s;
+}
+
+.sign-card:hover {
+  box-shadow: 0 1px 3px 0 rgba(60, 64, 67, .3), 0 4px 8px 3px rgba(60, 64, 67, .15);
+  border-color: #1a73e8;
+}
+
+.sign-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #202124;
+  margin-bottom: 8px;
+  font-family: 'Google Sans', 'Roboto', sans-serif;
+}
+
+.sign-description {
+  font-size: 14px;
+  color: #5f6368;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.sign-category {
+  font-size: 12px;
+  color: #80868b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.no-signs {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  color: #5f6368;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .signs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-filter {
+    flex-direction: column;
+  }
+
+  .category-filter button {
+    width: 100%;
+  }
+}
