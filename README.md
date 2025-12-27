@@ -11,6 +11,11 @@ SignSpeak is a real-time, AI-powered sign language translator that converts Amer
 
 ---
 
+🌐 Firebase Hosting Deployment
+Live URL: https://signspeak-devstack.web.app
+
+---
+
 ## 🌟 The Problem
 
 - **70 million+** people worldwide use sign language as their primary means of communication
